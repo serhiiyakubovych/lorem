@@ -1,0 +1,17 @@
+$slider-bg-color: #290000;
+$body-bg-color: #660000;
+$active-bg-color: #76c38f; /* Buttons, selected items etc */
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+html, body {
+	padding: 0;
+	margin: 0;
+	width: 100%;
+	height: 100%;
+	background: $body-bg-color;
+}
