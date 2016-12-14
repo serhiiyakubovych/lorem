@@ -5,8 +5,9 @@
 	<meta name="keywords" content="Lorem">
 	<meta name="description" content="Lorem ipsum dolor sit amet.">
 	<link rel="icon" href="favicon.png">
-	<title>Lorem 101</title>
+	<title>Lorem</title>
 	<link rel="stylesheet" href="css/main.css">
+	<script src="js/main.js"></script>
 </head>
 <body>
 	<header>
@@ -24,13 +25,16 @@
 	</header>
 
 	<section class="slider">
-		<div class="slider-box">
+		<div class="slider-box" id="slider">
 			<div class="slider-wrapper">
-				<h1 class="slider--title">Lorem ipsum dolor sit amet.</h1>
-				<p class="slider--description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat obcaecati omnis quisquam iusto consequatur, ex maiores dolores, fugiat veniam ipsam reprehenderit rem fuga voluptatibus voluptatem quasi nostrum eaque et placeat!</p>
-				<button class="readmore-button">Read more here</button>
+				<h1 class="slider--title" id="slider-title">Lorem ipsum dolor sit amet.</h1>
+				<p class="slider--description" id="slider-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat obcaecati omnis quisquam iusto consequatur, ex maiores dolores, fugiat veniam ipsam reprehenderit rem fuga voluptatibus voluptatem quasi nostrum eaque et placeat!</p>
+				<button class="readmore-button" id="slider-button">Read more here</button>
 			</div>
-			<div class="slider--photo"></div>
+			<div class="slider--photo" id="slider-photo" id="slider-prev"></div>
+			<div class="slider--controlls slider--controlls-prev" id="slider-prev">
+			</div>
+			<div class="slider--controlls slider--controlls-next" id="slider-next"></div>
 		</div>
 	</section>
 
@@ -72,16 +76,48 @@
 	</section>
 
 	<footer>
-		<div class="footer-col blog-col"></div>
-		<div class="footer-col links-col"></div>
-		<div class="footer-col tweets-col"></div>
-		<div class="footer-col contact-us-col"></div>
+		<div class="footer-box">
+			<div class="footer-col">
+				<h2 class="footer-col--title">From the blog</h2>
+				<h3 class="post-title"><a href="#">Post Title</a></h3>
+				<p class="author"><a href="#">Admin</a><span>, domainname.com</span></p>
+				<p class="date">Friday, 6th April 2007</p>
+				<p class="post-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam dolore laudantium, dolorem, sed at iure eligendi harum ut minus temporibus neque excepturi repellendus laborum nemo nam assumenda suscipit. Dolorum, veniam.</p>
+				<a href="#" class="read-more">Read more</a>
+			</div>
+			<div class="footer-col">
+				<h2 class="footer-col--title">Quick links</h2>
+				<ul class="links-list">
+					<li><a href="#">Lorem ipsum dolor.</a></li>
+					<li><a href="#">Modi pariatur, recusandae?</a></li>
+					<li><a href="#">Magnam, dolore id.</a></li>
+					<li><a href="#">Mollitia, blanditiis, quidem.</a></li>
+					<li><a href="#">Perferendis, ducimus nobis?</a></li>
+					<li><a href="#">Odit, quos nesciunt.</a></li>
+					<li><a href="#">Inventore, asperiores, nemo.</a></li>
+				</ul>
+			</div>
+			<div class="footer-col">
+				<h2 class="footer-col--title">Latest tweets</h2>
+				<p class="post-text"><a href="#">@namehere</a> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora consequuntur cum, et repellendus consectetur totam, dicta praesentium in! Neque, necessitatibus.</p>
+				<p class="post-text"><a href="#">@namehere</a> Autem eius quisquam reprehenderit maxime laudantium nulla optio iste voluptas, aliquam saepe harum molestiae, atque qui modi vero alias minus!</p>
+			</div>
+			<div class="footer-col">
+				<h2 class="footer-col--title">Contact us</h2>
+				<form class="contact-us-form">
+					<input name="name" type="text" placeholder="Full Name">
+					<input name="email" type="email" placeholder="Email Address">
+					<input name="subject" type="text" placeholder="Subject">
+					<textarea name="message" id="message" cols="30" rows="10" placeholder="Message"></textarea>
+					<input type="submit" value="Submit">
+				</form>
+			</div>
+		</div>
 	</footer>
 
 	<section class="copyright">
 		<span class="rights">Copyright &copy; 2016 Domain name - all rights reserved</span>
 		<span class="authorship">Created by YS</span>
 	</section>
-
 </body>
 </html>

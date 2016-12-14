@@ -2,7 +2,7 @@
 $slider-bg-color: #290000;
 $body-bg-color: #660000;
 $active-bg-color: #76c38f; /* Buttons, selected items etc */
-
+$main-font: Georgia;
 * {
 	padding: 0;
 	margin: 0;
@@ -11,13 +11,19 @@ $active-bg-color: #76c38f; /* Buttons, selected items etc */
 a {
 	text-decoration: none;
 	color: $active-bg-color;
+	transition: all .75s;
+	&:hover {
+		color: #fff;
+	}
 }
+button, input[type="submit"] { outline: none; }
 html, body {
 	padding: 0;
 	margin: 0;
 	width: 100%;
 	height: 100%;
 	background: $body-bg-color;
+	font-family: $main-font;
 }
 
 /* HEADER */
@@ -51,7 +57,7 @@ header {
 			list-style: none;
 			li {
 				display: inline-block;
-				margin-right: 10px;
+				margin-right: 8px;
 				a {
 					position: relative;
 					padding: 10px 20px;
@@ -105,8 +111,8 @@ header {
 		height: 400px;
 		box-sizing: content-box;
 		margin: auto;
-		&:before, &:after {
-			content: '';
+		transition: all .3s ease-in-out;
+		.slider--controlls {
 			width: 15px;
 			height: 30px;
 			position: absolute;
@@ -115,11 +121,14 @@ header {
 			-webkit-background-size: cover;
 			background-size: cover;
 			cursor: pointer;
+			transition: all 1s ease;
+			&:hover {
+				transform: scale(1.2);
+				filter: hue-rotate(200deg);
+			}
 		}
-		&:before {
-			left: 0;
-		}
-		&:after {
+		.slider--controlls-prev { left: 0; }
+		.slider--controlls-next {
 			background-position: right;
 			right: 0;
 		}
@@ -165,9 +174,6 @@ header {
 					background: #fff;
 					color: $active-bg-color;
 				}
-				&:active {
-					outline: none;
-				}
 			}
 		}
 	}
@@ -182,12 +188,12 @@ header {
 	.service {
 		margin: auto;
 		margin-right: 20px;
-		padding: 20px 40px;
+		padding: 20px 30px;
 		display: inline-block;
 		width: 230px;
 		max-height: 330px;
 		background: #fff;
-		transition: all .3s;
+		transition: all .4s ease-in-out;
 		&:hover {
 			cursor: pointer;
 			background: $active-bg-color;
@@ -261,7 +267,7 @@ header {
 		&:hover {
 			border: 5px solid $active-bg-color;
 			cursor: pointer;
-			span { display: none; }
+			span { opacity: 0; }
 			img { filter: saturate(2); }
 		}
 		&:nth-child(3n) {
@@ -276,6 +282,7 @@ header {
 			bottom: 0;
 			background: #151515;
 			font-size: 14px;
+			transition: all 1s;
 		}
 		img {
 			position: absolute;
@@ -286,5 +293,112 @@ header {
 			object-fit: cover;
 			transition: all .4s;
 		}
+	}
+}
+
+/* FOOTER */
+footer {
+	margin-top: 60px;
+	background: #303030;
+	color: #979797;
+	.footer-box {
+		max-width: 80%;
+		margin: auto;
+		padding: 40px 0 40px;
+		text-align: center;
+		font-size: 13px;
+		line-height: 22px;
+		.footer-col {
+			display: inline-block;
+			max-width: 20%;
+			margin-right: 40px;
+			vertical-align: top;
+			text-align: left;
+			&:last-child {
+				margin-right: 0;
+			}
+			.footer-col--title {
+				margin-bottom: 30px;
+				color: #fff;
+				font-size: 16px;
+				text-transform: capitalize;
+				font-weight: normal;
+			}
+			.post-title {
+				margin-bottom: 15px;
+			}
+			.post-text { margin-bottom: 10px; }
+			.author, .date { font-size: 10px; margin-bottom: 5px; }
+			.author span { color: #666; }
+			.read-more:after { content: ' \BB';	}
+
+			.links-list {
+				list-style: none;
+				padding: 0;
+				margin: 0;
+				li {
+					position: relative;
+					padding: 10px;
+					border-bottom: 1px solid #404040;
+					&:before {
+						position: absolute;
+						left: 0;
+						content: '\BB';
+					}
+				}
+			}
+			.contact-us-form {
+				input:not([type="submit"]), textarea {
+					padding: 10px;
+					margin-bottom: 10px;
+					width: 100%;
+					border: none;
+					border-radius: 10px;
+					background: #222;
+					color: #979797;
+					font-family: $main-font;
+					font-size: 13px;
+					letter-spacing: normal;
+					&:hover { border: 1px dashed #fff; padding: 9px; }
+				}
+				input[type="submit"] {
+					padding: 10px;
+					border: none;
+					border-radius: 10px;
+					background: $active-bg-color;
+					color: #303030;
+					font-size: 12px;
+					text-transform: uppercase;
+					font-weight: bold;
+					transition: all .3s ease-in-out;
+					&:hover {
+						cursor: pointer;
+						background: #fff;
+						color: $active-bg-color;
+					}
+				}
+			}
+		}
+	}
+}
+
+/* COPYRIGHT */
+.copyright {
+	padding: 25px 10%;
+	border-top: 1px solid #000;
+	box-shadow: inset 0 1px 0 0 #3a3a3a;
+	background: #2b2b2b;
+	color: #979797;
+	font-size: 14px;
+	.rights {
+		float: left;
+	}
+	.authorship {
+		float: right;
+	}
+	&:after { /* clearfix */
+		content: '';
+		display: block;
+		clear: both;
 	}
 }
