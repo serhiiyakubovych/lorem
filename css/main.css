@@ -82,6 +82,14 @@ header {
               width: 80%; }
 
 /* SLIDER */
+.hide-slider-element {
+  opacity: 0;
+  transform: translateX(-500px); }
+
+.show-slider-element {
+  opacity: 1;
+  transform: translateX(500px); }
+
 .slider {
   display: block;
   padding-top: 150px;
@@ -125,7 +133,11 @@ header {
       border-radius: 50%;
       background: url("https://static1.squarespace.com/static/5446908be4b0e284a8fb3b30/5633efece4b0b8a4b6edae3e/58334cda6a4963cd4fbd4cdb/1479757140683/cover2web.jpg?format=750w") no-repeat top;
       -webkit-background-size: cover;
-      background-size: cover; }
+      background-size: cover;
+      transition: .6s ease-out; }
+      .slider .slider-box .slider--photo:hover {
+        cursor: pointer;
+        border-color: #76c38f; }
     .slider .slider-box .slider-wrapper {
       vertical-align: middle;
       display: inline-block;
@@ -321,6 +333,8 @@ footer {
         footer .footer-box .footer-col .contact-us-form input:not([type="submit"]):hover, footer .footer-box .footer-col .contact-us-form textarea:hover {
           border: 1px dashed #fff;
           padding: 9px; }
+      footer .footer-box .footer-col .contact-us-form textarea {
+        resize: none; }
       footer .footer-box .footer-col .contact-us-form input[type="submit"] {
         padding: 10px;
         border: none;
