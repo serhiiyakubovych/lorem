@@ -44,7 +44,7 @@ header {
 			display: inline-block;
 			width: 185px;
 			height: 35px;
-			margin-right: 160px;
+			margin-right: 10%;
 			background: url('../img/logo.png') no-repeat center;
 			-webkit-background-size: cover;
 			background-size: cover;
@@ -201,6 +201,7 @@ header {
 	.service {
 		margin: auto;
 		margin-right: 20px;
+		margin-bottom: 20px;
 		padding: 20px 30px;
 		display: inline-block;
 		width: 230px;
@@ -414,5 +415,60 @@ footer {
 		content: '';
 		display: block;
 		clear: both;
+	}
+}
+
+@media screen and (max-width: 1300px) {
+	header .menu .logo {
+		margin-right: 0;
+		margin-bottom: 20px;
+	}
+	.slider-wrapper { margin-right: 0; }
+}
+@media screen and (max-width: 1000px) {
+	header {
+		.menu {
+			position: relative;
+			height: 100%;
+			.logo {
+				display: none;
+			}
+			ul {
+				position: absolute;
+				top: 0;
+				right: 0;
+				background: #000;
+				z-index: 999;
+				li {
+					display: block;
+					margin-bottom: 20px;
+					a {
+						&.active {
+						}
+						&:not(.active) {
+							&:before, &:after {
+								display: none;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	#slider-photo {
+		display: none;
+	}
+	.slider .slider-box .slider-wrapper {
+		margin-top: 30px;
+		margin-right: 0;
+		max-width: 80%;
+	}
+	.latest-work .work {
+		margin-right: 0;
+	}
+	footer .footer-box .footer-col {
+		max-width: 40%;
+		margin-right: 20px;
+		margin-bottom: 40px;
 	}
 }

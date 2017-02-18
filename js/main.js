@@ -8,19 +8,19 @@
 			this.isButton = isButton;
 		}
 	}
-	var SliderList = [ new Slide('https://static1.squarespace.com/static/5446908be4b0e284a8fb3b30/5633efece4b0b8a4b6edae3e/58334cda6a4963cd4fbd4cdb/1479757140683/cover2web.jpg?format=750w',
+	var SliderList = [ new Slide('img/slide-1.jpg',
 		'Lorem ipsum dolor sit amet.',
 		'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat obcaecati omnis quisquam iusto consequatur, ex maiores dolores, fugiat veniam ipsam reprehenderit rem fuga voluptatibus voluptatem quasi nostrum eaque et placeat!',
 		true),
-	new Slide('http://inkygoodness.com/wp-content/uploads/kelsey-wrotten-comic.jpg',
+	new Slide('img/slide-2.jpg',
 		'Lorem ipsum dolor.',
 		'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae non magnam expedita possimus facilis placeat.',
 		true),
-	new Slide('http://inkygoodness.com/wp-content/uploads/download_asset-23.jpg',
+	new Slide('img/slide-3.jpg',
 		'Lorem ipsum dolor.',
 		'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente, id!',
 		true),
-	new Slide('http://comicsalliance.com/files/2013/04/pinupdeath.jpg',
+	new Slide('img/slide-4.jpg',
 		'Lorem ipsum dolor.',
 		'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat consectetur, dolorum quas tempora temporibus praesentium quam et asperiores. Eum, illum.',
 		false) ];
