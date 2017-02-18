@@ -385,14 +385,16 @@ footer {
     header .menu ul {
       position: absolute;
       top: 0;
-      right: 0;
-      background: #000;
-      z-index: 999; }
+      left: 50%;
+      transform: translateX(-50%); }
       header .menu ul li {
         display: block;
         margin-bottom: 20px; }
         header .menu ul li a:not(.active):before, header .menu ul li a:not(.active):after {
           display: none; }
+
+  .slider {
+    padding-top: 210px; }
 
   #slider-photo {
     display: none; }
@@ -400,7 +402,8 @@ footer {
   .slider .slider-box .slider-wrapper {
     margin-top: 30px;
     margin-right: 0;
-    max-width: 80%; }
+    max-width: 80%;
+    text-align: center; }
 
   .latest-work .work {
     margin-right: 0; }

@@ -436,9 +436,8 @@ footer {
 			ul {
 				position: absolute;
 				top: 0;
-				right: 0;
-				background: #000;
-				z-index: 999;
+                left: 50%;
+                transform: translateX(-50%);
 				li {
 					display: block;
 					margin-bottom: 20px;
@@ -455,6 +454,9 @@ footer {
 			}
 		}
 	}
+    .slider {
+        padding-top: 210px;
+    }
 	#slider-photo {
 		display: none;
 	}
@@ -462,6 +464,7 @@ footer {
 		margin-top: 30px;
 		margin-right: 0;
 		max-width: 80%;
+        text-align: center;
 	}
 	.latest-work .work {
 		margin-right: 0;
